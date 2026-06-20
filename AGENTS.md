@@ -29,6 +29,10 @@ ai-skills/
 │   │   ├── references/
 │   │   └── evals/
 │   ├── video/SKILL.md
+│   ├── youtube-transcript/
+│   │   ├── SKILL.md
+│   │   ├── agents/openai.yaml
+│   │   └── lib/get_transcript.py
 │   ├── outreach/SKILL.md
 │   ├── lovable/SKILL.md
 │   └── gws-cli/SKILL.md
@@ -52,6 +56,7 @@ ai-skills/
 | `sales-enablement` | "pitch deck", "one-pager", "objection handling", "sales deck" | Create sales collateral — decks, one-pagers, objection docs, demo scripts |
 | `email-sequence` | "email sequence", "drip campaign", "nurture sequence" | Design and build email sequences, drip campaigns, automated lifecycle flows |
 | `video` | "video pipeline", "social video", "content video" | Leo content pipeline — ElevenLabs voice + JSON2Video/Remotion production |
+| `youtube-transcript` | "get YouTube transcript", "extract transcript from YouTube", "pull captions from this video", "transcribe this YouTube episode" | Extract transcript from any YouTube video using auto-generated captions — free, instant, no HappyScribe credits |
 | `outreach` | "/outreach <company>", "networking outreach" | Daily networking outreach workflow — overdue follow-ups, drafted messages, send |
 | `lovable` | "push to Lovable", "update Lovable project", "build in Lovable" | Send prompts to any Lovable project via MCP without leaving Claude Code |
 | `gws-cli` | "Google Drive", "Gmail", "Calendar", "gws" | Google Workspace CLI — Drive, Gmail, Calendar, Sheets, Docs, Slides operations |

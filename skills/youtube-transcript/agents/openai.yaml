@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Transcript"
+  short_description: "Extract transcript from any YouTube video using auto-generated captions — free, instant, no credits"
+  default_prompt: "Get the transcript from this YouTube video and save it as plain text ready for the content pipeline."

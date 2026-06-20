@@ -11,14 +11,27 @@ It follows the WAT framework: **Workflows + Agent + Tools**.
 
 ```
 ai-skills/
-├── AGENTS.md                     # This file — universal agent instructions (you are here)
-├── CLAUDE.md                     # @AGENTS.md import + Claude Code-specific notes
+├── AGENTS.md                              # This file — universal agent instructions (you are here)
+├── CLAUDE.md                              # @AGENTS.md import + Claude Code-specific notes
 ├── skills/
-│   └── salesflare/
-│       ├── SKILL.md              # WAT workflow SOP — invoke with /salesflare or natural language
-│       ├── agents/openai.yaml    # Codex display config (ignored by Claude Code)
-│       └── lib/
-│           └── salesflare_client.py  # Canonical Salesflare API library (no CSV)
+│   ├── salesflare/
+│   │   ├── SKILL.md                       # WAT workflow SOP
+│   │   ├── agents/openai.yaml             # Codex display config
+│   │   └── lib/salesflare_client.py       # Canonical Salesflare API library
+│   ├── local-seo/SKILL.md                 # Full Local SEO system (12 modules)
+│   ├── digitaltrack-prospect-presentation/SKILL.md
+│   ├── proposal-builder/
+│   │   ├── SKILL.md
+│   │   └── references/                    # section-copy.md, pricing-schema.md
+│   ├── sales-enablement/SKILL.md
+│   ├── email-sequence/
+│   │   ├── SKILL.md
+│   │   ├── references/
+│   │   └── evals/
+│   ├── video/SKILL.md
+│   ├── outreach/SKILL.md
+│   ├── lovable/SKILL.md
+│   └── gws-cli/SKILL.md
 └── README.md
 ```
 
@@ -33,6 +46,15 @@ ai-skills/
 | Skill | Trigger | What It Does |
 |-------|---------|--------------|
 | `salesflare` | "add to CRM", "new prospect", "look up in Salesflare" | Create/update accounts, contacts, opportunities, tasks via API — no CSV |
+| `local-seo` | "local SEO", "GBP audit", "map ranking", "run SEO for" | Full DigitalTrack Local SEO system — audit through monthly maintenance |
+| `digitaltrack-prospect-presentation` | "build prospect deck", "prospect presentation" | Build branded interactive prospect deck from audit/transcript/research files |
+| `proposal-builder` | "build a proposal", "propuesta", "sales proposal page" | Build/update DigitalTrack sales proposal in Lovable — 9-section bilingual structure |
+| `sales-enablement` | "pitch deck", "one-pager", "objection handling", "sales deck" | Create sales collateral — decks, one-pagers, objection docs, demo scripts |
+| `email-sequence` | "email sequence", "drip campaign", "nurture sequence" | Design and build email sequences, drip campaigns, automated lifecycle flows |
+| `video` | "video pipeline", "social video", "content video" | Leo content pipeline — ElevenLabs voice + JSON2Video/Remotion production |
+| `outreach` | "/outreach <company>", "networking outreach" | Daily networking outreach workflow — overdue follow-ups, drafted messages, send |
+| `lovable` | "push to Lovable", "update Lovable project", "build in Lovable" | Send prompts to any Lovable project via MCP without leaving Claude Code |
+| `gws-cli` | "Google Drive", "Gmail", "Calendar", "gws" | Google Workspace CLI — Drive, Gmail, Calendar, Sheets, Docs, Slides operations |
 
 ## Operating Rules for All Agents
 
@@ -63,4 +85,5 @@ This folder is the canonical source. Changes here must be reflected in:
 - `~/.claude/skills/` if Claude Code has local copies (prefer `@import` over copies)
 - `~/.codex/plugins/digitaltrack/skills/` for Codex (keep in sync or symlink when possible)
 
-**GitHub repo (Phase 2)**: push to `digitaltrack-ai-skills` (private) for version control and cross-machine sync.
+**GitHub remote**: https://github.com/digitaltrack-ca/digitaltrack-ai-skills (private)
+Push changes with `git push origin master` to keep the remote in sync.

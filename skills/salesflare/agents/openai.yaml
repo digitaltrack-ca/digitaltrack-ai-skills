@@ -1,0 +1,4 @@
+interface:
+  display_name: "Salesflare CRM"
+  short_description: "Create or update Salesflare accounts, contacts, opportunities, and tasks via API"
+  default_prompt: "Add a new prospect to Salesflare: create the account, contact, opportunity, and follow-up task via the API."

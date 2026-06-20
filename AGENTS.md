@@ -55,6 +55,7 @@ ai-skills/
 | `outreach` | "/outreach <company>", "networking outreach" | Daily networking outreach workflow — overdue follow-ups, drafted messages, send |
 | `lovable` | "push to Lovable", "update Lovable project", "build in Lovable" | Send prompts to any Lovable project via MCP without leaving Claude Code |
 | `gws-cli` | "Google Drive", "Gmail", "Calendar", "gws" | Google Workspace CLI — Drive, Gmail, Calendar, Sheets, Docs, Slides operations |
+| `pacifiklive-content-router` | "which folder for pacifiklive", "route this content", "pacifiklive originals", "where does this go", "file this article", "category for paci" | Route PacifikLive content to correct Originals category folder, create article subfolder with draft + images/, confirm with Leo before writing |
 
 ## Operating Rules for All Agents
 

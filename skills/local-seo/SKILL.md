@@ -523,16 +523,51 @@ Use the Launch Checklist Template at:
 
 ### Compliance checks — run before launch
 
+#### ADA (Americans with Disabilities Act — website accessibility)
+
 | Check | Pass / Fail / Note |
 |---|---|
-| ADA: all images have descriptive alt text | |
-| ADA: body text color contrast meets WCAG 2.1 AA (4.5:1 minimum) — check with browser contrast tool | |
-| ADA: all form fields have visible labels | |
-| ADA: page is keyboard-navigable (tab through links and CTAs) | |
+| All images have descriptive alt text | |
+| Body text color contrast meets WCAG 2.1 AA (4.5:1 minimum) — verify with browser contrast tool | |
+| All form fields have visible labels | |
+| Page is keyboard-navigable (tab through all links, buttons, and CTAs without a mouse) | |
+
+#### CIPA (California Invasion of Privacy Act — tracking tools)
+
+CIPA applies to tools that intercept or "read" user communications or inputs without consent. Focus on chat widgets, session replay, and behavioral scripts — not standard analytics.
+
+**Step 1 — Audit what is installed on the site:**
+
+| Tool category | Examples | Risk level | Action |
+|---|---|---|---|
+| SEO / search console | Google Search Console, Bing Webmaster Tools | Low — no visitor pixel | Keep. No consent banner needed. |
+| Basic traffic analytics | GA4 (traffic, pages, events only) | Low-medium | Keep. Disclose in privacy policy. |
+| GA4 + advertising | GA4 linked to Google Ads, remarketing audiences, Google Signals | Medium-high | Written client approval + consent mode controls |
+| Ad pixels | Meta Pixel, TikTok Pixel, LinkedIn Insight Tag | High | Consent banner required before firing |
+| Session replay / behavioral | Hotjar, FullStory, Microsoft Clarity, Lucky Orange | High — CIPA exposure | Consent disclosure required; consider removing if client is California-facing |
+| Live chat widgets | Intercom, Drift, LiveChat, Tidio, Zendesk Chat | High — CIPA exposure | Disclose in privacy policy; ensure provider terms allow CA visitors; consent disclosure recommended |
+
+**Step 2 — Apply the correct action per tool found:**
+
+- GA4 basic only: confirm ad features, Google Signals, and remarketing audiences are OFF unless client approved. Document in client notes.
+- GA4 linked to Google Ads: get written client approval. Enable Google Consent Mode.
+- Meta/TikTok Pixel or session replay: do not install without a consent banner in place.
+- Live chat widgets: check provider's CIPA compliance terms. Add privacy policy disclosure.
+
+**Step 3 — Privacy policy check:**
+
+| Check | Pass / Fail / Note |
+|---|---|
 | Privacy policy page exists and is linked in the footer | |
+| Privacy policy discloses all tracking tools currently installed | |
+| Privacy policy identifies California residents' rights (CCPA opt-out if applicable) | |
+
+#### General pre-launch
+
+| Check | Pass / Fail / Note |
+|---|---|
 | No guaranteed results language ("we will rank you #1," "guaranteed leads," "top of Google") | |
 | Contact information (phone, address) is accurate and matches GBP exactly | |
-| SIPA compliance: [pending clarification from Leo — confirm scope] | |
 
 ### Indexing escalation — if a priority page is not indexed after 4–6 weeks, check:
 

@@ -215,7 +215,9 @@ Priority levels:
 
 Flag duplicates within the same directory. Include claim URL or support contact path when available.
 
-Include these directories at minimum: Google Business Profile, Apple Maps, Bing Places, Yelp, Facebook, BBB, Houzz, Thumbtack, Nextdoor, Angi, HomeAdvisor, and any relevant niche directories for the industry.
+Include these directories at minimum: Google Business Profile, Apple Maps, Bing for Business, Yelp, Facebook, BBB, Houzz, Thumbtack, Nextdoor, Angi, HomeAdvisor, and any relevant niche directories for the industry.
+
+**AI search visibility note:** Bing for Business (business.bing.com) is the primary business entity for ChatGPT recommendations — treat it as equally critical to GBP. Verify it is claimed, NAP matches GBP exactly, and categories are set. Apple Maps is difficult to claim but valuable for AI citation signals — go through the process if not already done.
 
 #### H. Social media baseline
 
@@ -235,6 +237,20 @@ For top 3–5 local competitors:
 - Whether they have dedicated service pages and city pages
 - Content depth (estimated)
 - What they are doing that the client is not
+
+#### J. Technical tracking and AI search baseline
+
+Verify the following are set up and accessible:
+
+| Tool | Status | Notes |
+|---|---|---|
+| Google Search Console | Verified / Not set up | Ownership confirmed, site verified, sitemap submitted |
+| Google Analytics 4 | Verified / Not set up | Property linked, data flowing |
+| Bing Webmaster Tools | Verified / Not set up | Site verified, sitemap submitted |
+| Bing for Business profile | Claimed / Unclaimed / Missing | NAP matches GBP exactly |
+| GBP ownership | Owner / Manager / Unverified | |
+
+Flag missing tracking tools as P0 if no analytics is in place, P1 if GA4/GSC exist but Bing tools are missing.
 
 ---
 
@@ -286,6 +302,19 @@ If an intake call transcript or notes exist in the folder, read them and extract
 | Ideal job | Minimum project size, preferred customer type |
 | Urgency | Why are they looking for help now? What happens if nothing changes? |
 | Budget and readiness | Monthly investment range, timeline, expectations |
+
+### Technical tracking setup
+
+Confirm or set up during intake. These must be live before page production begins.
+
+| Tool | Action if missing |
+|---|---|
+| Google Analytics 4 | Create property, install tracking code or GTM snippet |
+| Google Search Console | Verify domain ownership via DNS or HTML tag; submit sitemap |
+| Bing Webmaster Tools | Verify site at bing.com/webmasters — import GSC site for fast setup |
+| Bing for Business | Claim or create at business.bing.com — NAP must match GBP exactly |
+
+Do not begin page production until GA4 and GSC are confirmed live. Bing tools can be set up in parallel.
 
 ### Compliance checkpoint
 
@@ -352,6 +381,18 @@ For each priority page, collect:
 
 Rule: Find the gap, not the consensus. Do not produce pages that repeat what the top results already say.
 
+**Location/geo page research — additional requirement (strict):**
+
+Location pages must be informationally additive. Generic landmark-stuffing is spam per Google's August 2025 update. Pages that are not informationally additive risk de-indexing per the April 2026 Google update. Before writing any location page, collect:
+
+- **Rank grid first**: identify the specific micro-neighborhood or landmark area where the client ranks at position 4–7 — write for that gap, not the city broadly
+- **Google Maps verified landmarks**: use only landmarks confirmed on Google Maps so Google's entity recognition system recognizes them
+- **Local eccentricities relevant to the service**: housing age, building type, climate factors, zoning, local industry mix, demographics (Census.gov)
+- **Client proof in that area**: any reviews, jobs, or references mentioning that neighborhood specifically
+- **SERP results for that micro-location**: what is currently ranking and what does it lack?
+
+Do not generate location pages at scale without this research. Aim for content that could only have been written about that specific area — not content where you could swap in any other city name and it would read the same.
+
 ### Page plan output
 
 Write `page-plan.md` in the client folder using the template structure. Include:
@@ -378,10 +419,11 @@ Page types:
 ### Content architecture rules:
 
 - Homepage mentions each secondary GBP category and links to the corresponding category page
-- Each category page links to its relevant service pages
+- Each category page links to its relevant service pages only — do not cross-link services between different category trees
 - Each service page links to related location pages and the contact/CTA page
 - No orphaned pages — every page receives at least one internal link from a higher-level page
 - No thin location pages — each must have unique proof (a local review, a job in that city, a local reference)
+- **Internal link hierarchy must exactly mirror the GBP structure.** A service listed under GBP Category 1 should only link up to Category 1 — not to services or pages under Category 2. Google and AI systems read internal links to map your business entity. Cross-linking between category trees weakens the signal. Do not let AI randomly decide what pages to link together.
 
 ### Output: `research-pack-[page-name].md` per Now page + `page-plan.md`
 
@@ -390,6 +432,26 @@ Page types:
 ## Stage 4: Content Production
 
 ### Run when: A page in the page plan is marked Now / drafting, and Leo requests a draft.
+
+### GBP landing page — special rules
+
+The GBP landing page receives approximately 98% of all human website traffic for local businesses. A visitor decides whether to call in under 30 seconds. This page is different from all other local SEO pages — it must convert a real person, not just signal to Google.
+
+**Do not write the GBP landing page from a pure AI prompt.** AI produces an average of what already exists online — which typically means a history lesson about the business. History lessons do not convert.
+
+Required structure for the GBP landing page:
+
+1. **Above the fold**: H1 states the service + city clearly. Primary trust signal visible immediately (review count/rating, license number, years in business, certifications). CTA button (call / get estimate) visible without scrolling.
+2. **Trust section**: Real reviews or testimonials — specific, ideally with the customer's first name and the service they received.
+3. **Why choose us**: 3–5 concrete differentiators. "Professional," "reliable," and "experienced" do not count — these are expected, not differentiating. Use specific proof: "Carrier Factory Authorized Dealer," "Diamond Certified," "4.9 stars across 300 reviews," "same-day service available."
+4. **Services overview**: Brief summary of each primary service with an internal link to the corresponding service page.
+5. **Service area**: Named cities served.
+6. **FAQ**: 3–5 questions from review mining or intake — things real customers ask.
+7. **Second CTA**: Repeated at the bottom.
+
+What to avoid above the fold: founding year, owner biography, mission statement, "family-owned and operated" without supporting proof. Move these below the first CTA if included at all.
+
+**Human review required before publishing.** Do not publish a GBP landing page that has not been read and approved by Leo or the client.
 
 ### Rules
 
@@ -454,6 +516,23 @@ Use the Launch Checklist Template at:
 | Index status tracked with date | |
 | Mobile rendering confirmed | |
 | Main CTA works | |
+| GA4 tracking is firing — confirmed in GA4 real-time report | |
+| Google Search Console verified, sitemap submitted, no crawl errors | |
+| Bing Webmaster Tools verified, sitemap submitted | |
+| Bing for Business profile is claimed and NAP matches GBP | |
+
+### Compliance checks — run before launch
+
+| Check | Pass / Fail / Note |
+|---|---|
+| ADA: all images have descriptive alt text | |
+| ADA: body text color contrast meets WCAG 2.1 AA (4.5:1 minimum) — check with browser contrast tool | |
+| ADA: all form fields have visible labels | |
+| ADA: page is keyboard-navigable (tab through links and CTAs) | |
+| Privacy policy page exists and is linked in the footer | |
+| No guaranteed results language ("we will rank you #1," "guaranteed leads," "top of Google") | |
+| Contact information (phone, address) is accurate and matches GBP exactly | |
+| SIPA compliance: [pending clarification from Leo — confirm scope] | |
 
 ### Indexing escalation — if a priority page is not indexed after 4–6 weeks, check:
 
@@ -488,6 +567,19 @@ Use the Monthly Tracker Template at:
 | Indexing | Confirm new pages are indexed; escalate non-indexed priority pages |
 | Reporting | Short client update from Leo: what we did, what changed, what we recommend next |
 
+### Year 2 — Advanced: Review platform diversification
+
+Only activate after the client has 25+ GBP reviews and is at least 6 months into the engagement. Do not split review focus before GBP is well established.
+
+| Platform | Why it matters | Priority |
+|---|---|---|
+| Bing for Business | Primary citation source for ChatGPT recommendations | High |
+| Yelp | Gemini weights Yelp reviews heavily for AI local recommendations | High |
+| BBB | Trusted citation; AI systems use it as a business credibility signal | Medium |
+| Angi / HomeAdvisor | Service-specific credibility for home service trades | Medium — industry-dependent |
+
+**Attribute reminder (all platforms):** When requesting reviews on any platform, prompt customers to describe the specific service performed, the situation, and the outcome. AI systems (ChatGPT, Gemini, Claude) use attribute matching — a review saying "they replaced my water heater on a Sunday evening" will match that business to a query about weekend or emergency service. Generic "great service" reviews do not trigger attribute matches.
+
 ### Output: Update `maintenance-log.md` monthly + produce `report-[YYYY-MM].md` for client reporting
 
 ---
@@ -499,11 +591,11 @@ Use the Monthly Tracker Template at:
 Hi [First Name], it's [Your Name] from [Company]. Thank you for letting us handle your [service] — glad it went well. If you have a minute, an honest Google review would mean a lot to us: [Google Review Link]
 
 Optional prompts if they want help getting started:
-- What service did we help with, and how did the process go?
-- Was there anything about the communication or scheduling that stood out?
-- What result or detail are you most happy with?
+- What specific service did we do, and how did it go? (The more specific, the better — e.g., "They replaced my water heater in 3 hours on a Tuesday afternoon.")
+- How was the response time? Did we show up when we said we would?
+- What was the outcome — did it solve the problem?
 
-No script needed — just your honest experience in your own words. Thank you.
+Keep it simple and honest. One specific sentence is worth more than "great service." Thank you.
 
 ---
 
@@ -519,11 +611,11 @@ If you have 2 minutes, an honest review on Google helps other homeowners like yo
 [Google Review Link]
 
 A few optional prompts if they're helpful:
-- What service did we complete and how did the process feel?
-- How was communication and scheduling?
-- What result or detail stood out?
+- What specific service did we do, and what was the result? (e.g., "Fixed our furnace before a cold snap — it's been running perfectly since.")
+- How was the response time and communication? Did we show up on time?
+- Was this an emergency call or planned service? How long did the job take?
 
-Your honest words are what help us most. No obligation — but it really does make a difference.
+The more specific your experience, the more it helps neighbors with the same situation find us. Your honest words are what help us most.
 
 Thanks again,
 [Your Name]

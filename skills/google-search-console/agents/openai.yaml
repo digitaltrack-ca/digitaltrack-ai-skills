@@ -1,0 +1,25 @@
+name: google-search-console
+description: >
+  Pull and analyze Google Search Console data for any client property using the
+  local SQLite-cached CLI. Covers quick wins, monthly comparisons, traffic drop
+  investigation, keyword cannibalization, content decay, and cross-client roll-ups.
+version: "1.0"
+triggers:
+  - "GSC"
+  - "Google Search Console"
+  - "search console"
+  - "quick wins"
+  - "keyword ranking"
+  - "traffic dropped"
+  - "gsc report"
+  - "gsc audit"
+  - "monthly GSC"
+skill_file: ../SKILL.md
+binary: google-search-console-pp-cli
+install: npx -y @mvanhorn/printing-press-library install google-search-console
+requires:
+  - go
+auth:
+  type: oauth2
+  config: ~/.config/google-search-console-pp-cli/config.toml
+  setup_command: google-search-console-pp-cli auth login

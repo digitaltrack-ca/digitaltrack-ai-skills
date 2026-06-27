@@ -200,7 +200,23 @@ google-search-console-pp-cli sync --site sc-domain:clientdomain.com --last 90d
 
 | Client | Property | Notes |
 |--------|----------|-------|
-| *(add clients here as you onboard them)* | | |
+| MP Prime Cleaning | `sc-domain:mpprimecleaning.com` | |
+| Sabor-Mex Kitchen | `sc-domain:sabormexkitchen.com` | |
+| Nieto's Woodworking | `sc-domain:nietoswoodworking.com` | |
+| Nituma Brothers Pest Control | `sc-domain:nitumabrotherspestcontrol.com` | Also has URL-prefix property |
+| Rosales Tax | `sc-domain:mrosalestax.com` | Also has URL-prefix property |
+| Top Klean Services | `sc-domain:topkleanservices.com` | Also has URL-prefix property |
+| PacifikLive | `https://www.pacifiklive.com/` | URL-prefix only |
+| Arroyo Drywall | `sc-domain:arroyodrywall.com` | |
+| Love and Care Caregiving | `sc-domain:loveandcarecaregiving.com` | |
+| Solano HCC | `sc-domain:solanohcc.com` | Also has URL-prefix property |
+| Termite Roof Inspection | `https://termiteroofinspection.com/` | URL-prefix only |
+| DigitalTrack | `sc-domain:digitaltrack.co` | Own agency site |
+| Solano Biz Blog | `https://blog.solanobiz.com/` | URL-prefix only |
+| The Bay's Taco Truck | `sc-domain:thebaystacotruck.com` | |
+| Citlalli Brands | `sc-domain:citlallibrands.com` | |
+| PL Concrete Inc | `sc-domain:plconcreteinc.com` | |
+| Blue Clean Janitorial | `sc-domain:bluecleanjanitorial.com` | Also has URL-prefix property |
 
 **To add a client**: run `webmasters list-sites --json` after auth, copy the `siteUrl` field, add a row above.
 

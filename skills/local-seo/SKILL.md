@@ -313,6 +313,7 @@ Confirm or set up during intake. These must be live before page production begin
 | Google Search Console | Verify domain ownership via DNS or HTML tag; submit sitemap |
 | Bing Webmaster Tools | Verify site at bing.com/webmasters — import GSC site for fast setup |
 | Bing for Business | Claim or create at business.bing.com — NAP must match GBP exactly |
+| Bing IndexNow | Run `indexnow` skill: `setup --domain <domain>` → host key file → `submit --domain <domain>`. Faster than waiting for Bing crawl. Key stored in `ai-skills/skills/indexnow/config/keys.json`. |
 
 Do not begin page production until GA4 and GSC are confirmed live. Bing tools can be set up in parallel.
 
@@ -519,6 +520,7 @@ Use the Launch Checklist Template at:
 | GA4 tracking is firing — confirmed in GA4 real-time report | |
 | Google Search Console verified, sitemap submitted, no crawl errors | |
 | Bing Webmaster Tools verified, sitemap submitted | |
+| Bing IndexNow key file hosted at domain root and 37 URLs submitted | |
 | Bing for Business profile is claimed and NAP matches GBP | |
 
 ### Compliance checks — run before launch
@@ -600,6 +602,8 @@ Use the Monthly Tracker Template at:
 | Rankings | Pull keyword + city ranking report; flag significant changes |
 | Content | Identify one page per month to improve with better proof, stronger content, or better links |
 | Indexing | Confirm new pages are indexed; escalate non-indexed priority pages |
+| IndexNow (Bing) | After any content push: run `python skills/indexnow/lib/indexnow_submit.py submit --domain <domain>` |
+| GSC Sitemap | After adding new pages: run `gsc-indexing` skill to resubmit sitemap to Google and get indexing report |
 | Reporting | Short client update from Leo: what we did, what changed, what we recommend next |
 
 ### Year 2 — Advanced: Review platform diversification

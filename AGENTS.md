@@ -44,6 +44,10 @@ ai-skills/
 │   │   ├── agents/openai.yaml
 │   │   ├── config/keys.json               # Domain → key mapping (one key per domain)
 │   │   └── lib/indexnow_submit.py         # Submit URLs to api.indexnow.org
+│   ├── gsc-indexing/
+│   │   ├── SKILL.md                       # GSC sitemap submit + URL indexing readiness
+│   │   ├── agents/openai.yaml
+│   │   └── lib/gsc_indexing.py            # Validate URLs + submit sitemap via GSC API
 │   └── wat/
 │       └── SKILL.md                       # WAT skill builder — scaffold new skills via 6-step framework
 └── README.md
@@ -76,6 +80,7 @@ ai-skills/
 | `google-analytics` | "GA4", "analytics", "pull analytics", "traffic channels", "monthly analytics", "what changed in GA4", "conversions this month", "ga4 report" | Pull and analyze GA4 data — traffic channels, top pages, period-over-period compare, anomaly detection, conversion reporting for client monthly reports |
 | `wat` | "build a new skill", "scaffold a skill", "add a skill to the repo", "WAT framework", "turn this into a skill", "create a WAT skill for X" | Scaffold a new WAT skill using the 6-step framework — outputs ready-to-use SKILL.md and registers it in AGENTS.md |
 | `indexnow` | "submit to Bing", "IndexNow", "fast indexing", "submit URLs", "notify Bing", "reindex" | Submit client website URLs to Bing/IndexNow for fast crawl prioritization — full sitemap or single URL, stdlib Python only |
+| `gsc-indexing` | "submit sitemap to Google", "GSC sitemap", "check indexing", "are these pages indexed", "GSC indexing report" | Validate URL indexing readiness + submit sitemap to Google Search Console — generates CSV + Markdown report |
 
 ## Operating Rules for All Agents
 

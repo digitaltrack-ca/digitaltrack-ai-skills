@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSC Indexing"
+  short_description: "Validate URL indexing readiness and submit sitemaps to Google Search Console — generates CSV + Markdown report per client property"
+  default_prompt: "Generate a GSC indexing readiness report for sabormexkitchen.com and submit the sitemap to Google Search Console."

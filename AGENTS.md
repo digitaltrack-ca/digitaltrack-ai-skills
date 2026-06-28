@@ -39,6 +39,11 @@ ai-skills/
 │   ├── google-search-console/
 │   │   ├── SKILL.md                       # GSC WAT skill — quick wins, compare, decay, roll-up
 │   │   └── agents/openai.yaml
+│   ├── indexnow/
+│   │   ├── SKILL.md                       # IndexNow URL submission skill
+│   │   ├── agents/openai.yaml
+│   │   ├── config/keys.json               # Domain → key mapping (one key per domain)
+│   │   └── lib/indexnow_submit.py         # Submit URLs to api.indexnow.org
 │   └── wat/
 │       └── SKILL.md                       # WAT skill builder — scaffold new skills via 6-step framework
 └── README.md
@@ -68,7 +73,9 @@ ai-skills/
 | `pacifiklive-content-router` | "which folder for pacifiklive", "route this content", "pacifiklive originals", "where does this go", "file this article", "category for paci" | Route PacifikLive content to correct Originals category folder, create article subfolder with draft + images/, confirm with Leo before writing |
 | `chcc-awards-scoring` | "score CHCC nominees", "chcc awards", "score the nominations", "awards review committee" | Score CHCC award nominees using official rubric — reads nomination PDFs, applies strict scoring rules, proposes scores for Leo to approve, updates Excel sheet |
 | `google-search-console` | "GSC", "search console", "quick wins", "traffic dropped", "gsc report", "gsc audit", "monthly GSC", "keyword ranking" | Pull and analyze Google Search Console data — quick wins, monthly compare, traffic drops, cannibalization, content decay, cross-client roll-ups via local SQLite cache |
+| `google-analytics` | "GA4", "analytics", "pull analytics", "traffic channels", "monthly analytics", "what changed in GA4", "conversions this month", "ga4 report" | Pull and analyze GA4 data — traffic channels, top pages, period-over-period compare, anomaly detection, conversion reporting for client monthly reports |
 | `wat` | "build a new skill", "scaffold a skill", "add a skill to the repo", "WAT framework", "turn this into a skill", "create a WAT skill for X" | Scaffold a new WAT skill using the 6-step framework — outputs ready-to-use SKILL.md and registers it in AGENTS.md |
+| `indexnow` | "submit to Bing", "IndexNow", "fast indexing", "submit URLs", "notify Bing", "reindex" | Submit client website URLs to Bing/IndexNow for fast crawl prioritization — full sitemap or single URL, stdlib Python only |
 
 ## Operating Rules for All Agents
 

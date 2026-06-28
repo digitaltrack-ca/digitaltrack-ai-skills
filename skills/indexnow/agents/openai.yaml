@@ -1,0 +1,4 @@
+interface:
+  display_name: "IndexNow URL Submitter"
+  short_description: "Submit URLs to Bing/IndexNow for fast crawl prioritization — from sitemap or single URL"
+  default_prompt: "Submit all URLs from the sitemap of sabormexkitchen.com to IndexNow so Bing indexes them quickly."

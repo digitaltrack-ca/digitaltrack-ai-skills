@@ -48,8 +48,15 @@ ai-skills/
 │   │   ├── SKILL.md                       # GSC sitemap submit + URL indexing readiness
 │   │   ├── agents/openai.yaml
 │   │   └── lib/gsc_indexing.py            # Validate URLs + submit sitemap via GSC API
-│   └── wat/
-│       └── SKILL.md                       # WAT skill builder — scaffold new skills via 6-step framework
+│   ├── wat/
+│   │   └── SKILL.md                       # WAT skill builder — scaffold new skills via 6-step framework
+│   └── sendpilot/
+│       ├── SKILL.md                       # LinkedIn outreach — job search, lead gen, freelance (3 branches)
+│       ├── references/                    # Message templates per use case
+│       └── agents/openai.yaml
+│   ├── contact-goat/
+│       ├── SKILL.md                       # LinkedIn research — coverage, warm intros, prospects, enrichment
+│       └── agents/openai.yaml
 └── README.md
 ```
 
@@ -81,6 +88,8 @@ ai-skills/
 | `wat` | "build a new skill", "scaffold a skill", "add a skill to the repo", "WAT framework", "turn this into a skill", "create a WAT skill for X" | Scaffold a new WAT skill using the 6-step framework — outputs ready-to-use SKILL.md and registers it in AGENTS.md |
 | `indexnow` | "submit to Bing", "IndexNow", "fast indexing", "submit URLs", "notify Bing", "reindex" | Submit client website URLs to Bing/IndexNow for fast crawl prioritization — full sitemap or single URL, stdlib Python only |
 | `gsc-indexing` | "submit sitemap to Google", "GSC sitemap", "check indexing", "are these pages indexed", "GSC indexing report" | Validate URL indexing readiness + submit sitemap to Google Search Console — generates CSV + Markdown report |
+| `sendpilot` | "sendpilot", "LinkedIn outreach", "LinkedIn campaign", "lead gen campaign", "job search outreach", "freelance outreach" | Build and launch LinkedIn outreach campaigns via SendPilot — 3 branches: job search (NSA-aligned), DigitalTrack lead gen, freelance consulting |
+| `contact-goat` | "who do I know at", "warm intro", "coverage", "find contacts at", "prospect linkedin", "who can introduce me", "enrich contact", "find leads linkedin" | LinkedIn research CLI — company coverage, warm intro paths, prospect lists, contact enrichment. Feeds pre-researched contacts into SendPilot and Salesflare. Free via LinkedIn browser session + Happenstance free tier. |
 
 ## Operating Rules for All Agents
 

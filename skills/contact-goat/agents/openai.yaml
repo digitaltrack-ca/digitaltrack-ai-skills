@@ -1,0 +1,36 @@
+name: contact-goat
+description: >
+  LinkedIn research and warm-intro mapping CLI. Find who Leo knows at target companies,
+  map intro paths, build prospect lists for SendPilot, and enrich contacts before outreach.
+  Covers job search (FinTech/SaaS) and DigitalTrack lead gen (local businesses).
+version: "1.0"
+triggers:
+  - "contact goat"
+  - "who do I know at"
+  - "warm intro"
+  - "coverage"
+  - "find contacts at"
+  - "prospect linkedin"
+  - "linkedin research"
+  - "map my network"
+  - "who can introduce me"
+  - "enrich contact"
+  - "find leads linkedin"
+skill_file: ../SKILL.md
+binary: contact-goat-pp-cli
+install: npx -y @mvanhorn/printing-press-library install contact-goat
+requires: []
+auth:
+  linkedin:
+    type: browser_session
+    setup_command: uvx linkedin-scraper-mcp@latest --login
+    cost: free
+  happenstance:
+    type: cookie
+    setup_command: contact-goat-pp-cli auth login --chrome --service happenstance
+    cost: free_14_searches_per_month
+  deepline:
+    type: env_var
+    env: DEEPLINE_API_KEY
+    cost: paid_credit_based
+    optional: true

@@ -1,0 +1,9 @@
+interface:
+  display_name: "Lead Magnet Builder"
+  short_description: "Build branded bilingual lead magnets from source material"
+  icon_small: "./assets/digitaltrack-circle-logo.svg"
+  icon_large: "./assets/digitaltrack-logo-blue.png"
+  brand_color: "#40D6E4"
+  default_prompt: "Use $lead-magnet-builder to turn these source materials into a branded lead magnet."
+policy:
+  allow_implicit_invocation: true

@@ -74,6 +74,7 @@ ai-skills/
 | `local-seo` | "local SEO", "GBP audit", "map ranking", "run SEO for" | Full DigitalTrack Local SEO system — audit through monthly maintenance |
 | `digitaltrack-prospect-presentation` | "build prospect deck", "prospect presentation" | Build branded interactive prospect deck from audit/transcript/research files |
 | `proposal-builder` | "build a proposal", "propuesta", "sales proposal page" | Build/update DigitalTrack sales proposal in Lovable — 9-section bilingual structure |
+| `lead-magnet-builder` | "lead magnet", "create a guide", "bilingual giveaway", "downloadable guide", "turn this transcript into a resource" | Turn transcripts, research, and notes into source-grounded branded lead magnets using reusable DOCX templates and brand rules |
 | `sales-enablement` | "pitch deck", "one-pager", "objection handling", "sales deck" | Create sales collateral — decks, one-pagers, objection docs, demo scripts |
 | `email-sequence` | "email sequence", "drip campaign", "nurture sequence" | Design and build email sequences, drip campaigns, automated lifecycle flows |
 | `video` | "video pipeline", "social video", "content video" | Leo content pipeline — ElevenLabs voice + JSON2Video/Remotion production |
@@ -122,3 +123,4 @@ This folder is the canonical source. Changes here must be reflected in:
 
 **GitHub remote**: https://github.com/digitaltrack-ca/digitaltrack-ai-skills (private)
 Push changes with `git push origin master` to keep the remote in sync.
+
